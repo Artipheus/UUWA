@@ -62,4 +62,4 @@ $ npm run generate
 For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
 
 # License
-IDGAF but at least credit [me](https://github.com/Artipheus/), also credit [Nuxt.js](https://nuxtjs.org).
+GNU General Public License v3.0
