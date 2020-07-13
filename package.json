@@ -25,5 +25,7 @@
     "sass-loader": "^9.0.2"
   },
   "license": "GPL-3.0",
-  { "name" : "Artipheus", "email" : "", "url" : "https://github.com/Artipeus" }
+  "name" : "Artipheus",
+  "email" : "",
+  "url" : "https://github.com/Artipeus"
 }
