@@ -1,73 +1,35 @@
 <template>
-  <div class="container">
-    <div>
-      <Logo />
-      <h1 class="title">
-        UUWA
-      </h1>
-      <div class="links">
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--green"
-        >
-          Documentation
-        </a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--grey"
-        >
-          GitHub
-        </a>
+  <div>
+    <h1 class="wtitle">
+      {{ info.title }}
+    </h1> <!-- Title believe it or not. -->
+    <div class="fd">
+      <!-- Element that contains a list of all utilities. -->
+      <!-- All links are dynamically created after being retrieved from the store. -->
+      <div v-for="utility in utilities" :key="utility.name" class="utils">
+        <nuxt-link :to="utility.id">
+          <button>
+            {{ utility.name }}
+          </button>
+        </nuxt-link>
       </div>
     </div>
   </div>
 </template>
 
 <script>
-export default {}
+export default {
+  layout: 'indexlayout', // Use Main page layout (which is only used once).
+  computed:
+  {
+    // Get info from store.
+    info () {
+      return this.$store.state.info
+    },
+    // Get utilities from store.
+    utilities () {
+      return this.$store.state.utilities
+    }
+  }
+}
 </script>
-
-<style>
-.container {
-  margin: 0 auto;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-.title {
-  font-family:
-    'Quicksand',
-    'Source Sans Pro',
-    -apple-system,
-    BlinkMacSystemFont,
-    'Segoe UI',
-    Roboto,
-    'Helvetica Neue',
-    Arial,
-    sans-serif;
-  display: block;
-  font-weight: 300;
-  font-size: 100px;
-  color: #35495e;
-  letter-spacing: 1px;
-}
-
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
-}
-
-.links {
-  padding-top: 15px;
-}
-</style>
