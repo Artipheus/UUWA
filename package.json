@@ -24,6 +24,6 @@
     "node-sass": "^4.14.1",
     "sass-loader": "^9.0.2"
   },
-  { "license": "(GPL-3.0)" },
+  "license": "GPL-3.0",
   { "name" : "Artipheus", "email" : "", "url" : "https://github.com/Artipeus" }
 }
