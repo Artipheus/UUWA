@@ -16,6 +16,7 @@
         </nuxt-link>
       </div>
     </section>
+    <!-- My amazing footer -->
     <footer class="footer">
       <p>Created by Artipheus - <a href="https://github.com/Artipheus/UUWA">Source</a></p>
     </footer>
