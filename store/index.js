@@ -5,7 +5,7 @@ export const state = () =>
       { name: 'Random Number Generator', id: 'rnd' },
       { name: 'IP Address & DNS', id: 'ip_dns' },
       { name: 'IP Address Calculator', id: 'ipcalc' },
-      { name: 'Note-taking utility', id: '' },
+      { name: 'Note utility', id: 'note' },
       { name: 'Calculator', id: 'calc' }
     ]
   })
