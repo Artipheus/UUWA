@@ -15,10 +15,10 @@ Most utilities will have a history table that will contain values the user has s
 
 ## Todo
 - [ ] Brainstorm more utilities.
-- [ ] Home page (index)
-  - [ ] for mobile.
-  - [ ] for tablet.
-  - [ ] for desktop.
+- [x] Home page (index)
+  - [x] for mobile.
+  - [x] for tablet.
+  - [x] for desktop.
 - [ ] RNG Utility
   - [ ] for mobile.
   - [ ] for tablet.
