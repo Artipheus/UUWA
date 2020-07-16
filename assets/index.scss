@@ -1,33 +1,5 @@
 @use "sass:color";
-@import url("https://fonts.googleapis.com/css2?family=Maven+Pro&family=Open+Sans");
-
-$contentBodyColor: #33415c;
-$btnColor: $contentBodyColor;
-$hoverBtn: #5c677d;
-$borderHover: #7D8597;
-$backgroundColor: #001233; /* #292b2e #1c2833 */
-$fonts: 'Maven Pro', 'Open Sans', 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-$borderRadius: 4px;
-$borderWidth: 2.5px;
-$fontColor: white;
-
-/* Everyone likes border-box. */
-*
-{
-  box-sizing: border-box;
-}
-
-html, body {
-  font-size: 16px;
-  word-spacing: 1px;
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-  background-color: $backgroundColor;
-  height: 100%;
-  color: $fontColor;
-}
+@import "universal.scss";
 
 body
 {
@@ -100,55 +72,6 @@ body
     font-size: 140%;
     margin: 2% 0px;
   }
-}
-
-/* CSS for footer. */
-.footer
-{
-  @extend .footerFont;
-  flex: 0 1 auto;
-  background: $contentBodyColor;
-  margin: 5% 0px;
-  border-radius: $borderRadius;
-  p
-  {
-    a
-    {
-      text-decoration: underline;
-      color: white;
-      transition-duration: 0.2s;
-      &:hover
-      {
-        color: gold;
-      }
-    }
-  }
-}
-
-/* Used for titles. */
-.titleFont
-{
-  font-family: 'Maven Pro', 'Source Sans Pro';
-  font-weight: 400;
-  color: white;
-}
-
-/* Used for content. */
-.contentFont
-{
-  font-family: 'Open Sans', 'Source Sans Pro';
-  font-weight: 300;
-  color: white;
-}
-
-/* Used for footer. */
-.footerFont
-{
-  font-family: 'Maven Pro', 'Source Sans Pro';
-  font-weight: 400;
-  font-size: 80%;
-  text-align: center;
-  color: white;
 }
 
 @media only screen and (min-width: 600px)
