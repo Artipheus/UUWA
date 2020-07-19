@@ -1,6 +1,6 @@
 # Useless Utilities Web App (UUWA)
 [![Netlify Status](https://api.netlify.com/api/v1/badges/7a4f8e6b-51cf-431d-9ae7-61fbbc3b53c8/deploy-status)](https://app.netlify.com/sites/nightingale-uuwa/deploys)
-[![Codacy Badge](https://app.codacy.com/project/badge/Grade/2710f6f916364253ac85857ae94c413d)](https://www.codacy.com/manual/nise44/UUWA?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=Artipheus/UUWA&amp;utm_campaign=Badge_Grade)
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/2710f6f916364253ac85857ae94c413d)](https://www.codacy.com/manual/Artipheus/UUWA?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=Artipheus/UUWA&amp;utm_campaign=Badge_Grade)
 
 A Website that contains random utilities.
 It's still WIP.
