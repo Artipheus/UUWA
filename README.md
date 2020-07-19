@@ -63,5 +63,15 @@ $ npm run generate
 
 For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
 
-# License
+## Credits
+
+Nick Roach  - https://www.iconfinder.com/iconsets/circle-icons-1
+
+Alexiuz AS  - https://www.iconfinder.com/WHCompare
+
+ultimatearm - https://www.flaticon.com/authors/ultimatearm
+
+Freepik     - http://www.freepik.com/
+
+## License
 GNU General Public License v3.0
