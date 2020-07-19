@@ -1,11 +1,6 @@
 @use "sass:color";
 @import "universal.scss";
 
-body
-{
-  padding: 5%;
-}
-
 .mainF
 {
   display: flex;
@@ -17,27 +12,24 @@ body
 /* CSS for every utility button in index.vue, div > a > button. */
 .utils
 {
-  margin: 10% 0px;
+  margin: 0px auto 5%;
   width: 80%;
   a
   {
     button
     {
-      @extend .contentFont;
-      box-shadow: 2px 2px 10px black;
+      @extend .contentFont, .buttonCSS;
       text-decoration: none;
-      background-color: $btnColor;
       padding: 15px;
       text-align: center;
       width: 100%;
-      border: $borderWidth solid $btnColor;
-      transition-duration: 0.4s;
-      border-radius: $borderRadius;
-      &:hover
-      {
-        background-color: $hoverBtn;
-        cursor: pointer;
-      }
+    }
+    img
+    {
+      display: block;
+      margin: 0px auto 5%;
+      height: 32px;
+      width: 32px;
     }
   }
 }
@@ -45,77 +37,71 @@ body
 /* Flexbox for utilites in index.vue. fd = flex-display. */
 .fd
 {
+  @extend .divCSS;
+  padding: 5% 0px;
   flex: auto;
   display: flex;
   flex-flow: column wrap; /* Property for setting flex direction and flex wrap. */
   justify-content: space-evenly;
   align-items: center;
-  border-radius: $borderRadius;
-  background-color: $contentBodyColor;
 }
 
 /* CSS for website title. */
 .wtitle
 {
+  @extend .divCSS;
+  background: rgba(51, 51, 51, 1); /* Transparency is not needed for this element. */
   flex: 0 1 auto;
   text-align: center;
   position: sticky;
   top: 0px;
-  box-shadow: 0 0 8px 0 black;
   padding: 5px;
-  background-color: $contentBodyColor;
-  border-radius: $borderRadius;
   margin-bottom: 5%;
   h1
   {
     @extend .titleFont;
     font-size: 140%;
-    margin: 2% 0px;
+    margin: 0px;
   }
 }
 
 @media only screen and (min-width: 600px)
 {
-  body
-  {
-    padding: 5% 7%;
-  }
   .wtitle
   {
     margin-bottom: 3%;
     h1
     {
-      font-size: 170%;
+      font-size: 200%;
     }
   }
   .fd
   {
     flex-flow: row wrap;
+    padding: 5%;
   }
   .utils
   {
-    margin: 4% 0px;
-    width: 45%;
+    margin: 0px 1% 5%;
+    flex: 1 0 45%;
+    padding: 0px;
     a
     {
       button
       {
-        font-size: 90%;
+        font-size: 89%;
+      }
+      img
+      {
+        height: 38px;
+        width: 38px;
       }
     }
-  }
-  .footer
-  {
-    margin: 3% 0px;
   }
 }
 
 @media only screen and (min-width: 768px)
 {
-  body
-  {
-    padding: 5%;
-  }
   .wtitle
   {
     position: static;
@@ -127,11 +113,55 @@ body
   .fd
   {
     flex-flow: row wrap;
+    padding: 4%;
   }
   .utils
   {
-    margin: 3.5% 0px;
-    width: 40%;
+    margin: 0px auto 5%;
+    flex: 0 0 40%;
+    padding: 0px;
+    a
+    {
+      img
+      {
+        height: 44px;
+        width: 44px;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) and (orientation: portrait)
+{
+  .wtitle
+  {
+    padding: 3% 0px;
+    h1
+    {
+      font-size: 300%;
+    }
+  }
+  .fd
+  {
+    padding: 5%;
+  }
+  .utils
+  {
+    flex: 0 0 45%;
+    margin: 0px 1% 3%;
+    a
+    {
+      button
+      {
+        font-size: 105%;
+        padding: 15% 0px;
+      }
+      img
+      {
+        height: 48px;
+        width: 48px;
+      }
+    }
   }
 }
 
@@ -139,11 +169,13 @@ body
 {
   .wtitle
   {
-    width: 60%;
-    margin-bottom: 2%;
+    width: 80%;
+    margin: 0px auto 2%;
+    padding: 1.5%;
     h1
     {
       text-align: center;
+      font-size: 250%;
     }
   }
   .fd
@@ -152,41 +184,77 @@ body
   }
   .utils
   {
-    margin: 3%;
-    width: 27.33%;
+    margin: 0px 1% 5%;
+    flex: 30%;
     a
     {
       button
       {
         font-size: 90%;
       }
+      img
+      {
+        height: 44px;
+        width: 44px;
+      }
     }
-  }
-  .footer
-  {
-    margin-top: 2%;
   }
 }
 
 @media only screen and (min-width: 1024px)
 {
-  .wtitle
-  {
-    width: 50%;
-  }
   .fd
   {
     justify-content: flex-start;
   }
   .utils
   {
-    margin: 2.5%;
-    width: 28.3%;
+    margin: 0px 1% 2%;
+    flex: 30%;
     a
     {
       button
       {
         font-size: 91.4%;
+      }
+      img
+      {
+        height: 44px;
+        width: 44px;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 1024px) and (orientation: portrait)
+{
+  .wtitle
+  {
+    width: 100%;
+    h1
+    {
+      font-size: 420%;
+    }
+  }
+  .fd
+  {
+    padding: 5%;
+  }
+  .utils
+  {
+    margin: 0px auto 5%;
+    flex: 0 0 45%;
+    padding: 0px;
+    a
+    {
+      button
+      {
+        font-size: 140%;
+      }
+      img
+      {
+        height: 72px;
+        width: 72px;
       }
     }
   }
@@ -198,41 +266,48 @@ body
   {
     h1
     {
-      font-size: 200%;
+      font-size: 250%;
     }
+  }
+  .fd
+  {
+    padding: 4%;
   }
   .utils
   {
-    margin: 2%;
-    width: 29.33%
+    margin: 0px 1% 3%;
+    flex: 30%;
   }
 }
 
 @media only screen and (min-width: 1440px)
 {
-  body
-  {
-    padding: 2% 6%;
-  }
   .wtitle
   {
-    width: 40%;
+    width: 75%;
     margin-bottom: 1.5%;
+  }
+  .fd
+  {
+    padding: 3%;
   }
   .utils
   {
+    margin: 0px 1% 3%;
+    flex: 0 0 23%;
+    padding: 0px;
     a
     {
       button
       {
         font-size: 96%;
       }
+      img
+      {
+        height: 48px;
+        width: 48px;
+      }
     }
-  }
-  .footer
-  {
-    font-size: 90%;
-    margin-top: 1.5%;
   }
 }
 
@@ -240,26 +315,32 @@ body
 {
   .wtitle
   {
-    width: 45%;
+    width: 75%;
     h1
     {
       font-size: 500%;
     }
   }
+  .fd
+  {
+    padding: 2.5%;
+  }
   .utils
   {
-    margin: 1.25% 2%;
-    width: 21%;
+    margin: 0px 1% 3%;
+    flex: 0 0 23%;
+    padding: 0px;
     a
     {
       button
       {
         font-size: 180%
       }
+      img
+      {
+        height: 86px;
+        width: 86px;
+      }
     }
-  }
-  .footer
-  {
-    font-size: 150%;
   }
 }
