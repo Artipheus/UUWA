@@ -1,4 +1,6 @@
 # Useless Utilities Web App (UUWA)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/7a4f8e6b-51cf-431d-9ae7-61fbbc3b53c8/deploy-status)](https://app.netlify.com/sites/nightingale-uuwa/deploys)
+
 A Website that contains random utilities.
 It's still WIP.
 
@@ -15,10 +17,10 @@ Most utilities will have a history table that will contain values the user has s
 
 ## Todo
 - [ ] Brainstorm more utilities.
-- [ ] Home page (index)
-  - [ ] for mobile.
-  - [ ] for tablet.
-  - [ ] for desktop.
+- [x] Home page (index)
+  - [x] for mobile.
+  - [x] for tablet.
+  - [x] for desktop.
 - [ ] RNG Utility
   - [ ] for mobile.
   - [ ] for tablet.

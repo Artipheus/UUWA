@@ -1,0 +1,201 @@
+@import url("https://fonts.googleapis.com/css2?family=Maven+Pro&family=Open+Sans");
+
+$contentBodyColor: rgba(200, 200, 200, 0.15);
+$btnColor: rgb(34, 34, 34);
+$hoverBtn: #5c677d;
+$borderHover: rgba(200, 200, 200, 0.1);
+$backgroundColor: rgb(25, 25, 25); /* #292b2e #1c2833 #001233 */
+$fonts: 'Maven Pro', 'Open Sans', 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+$borderRadius: 8px;
+$borderWidth: 2.5px;
+$fontColor: rgba(200, 200, 200, 0.85);
+
+/* Everyone likes border-box. */
+*
+{
+  box-sizing: border-box;
+}
+
+html, body {
+  font-size: 16px;
+  word-spacing: 1px;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  background-color: $backgroundColor;
+  height: 100%;
+}
+
+body
+{
+  padding: 5%;
+  margin: 0px;
+}
+
+/* CSS for footer. */
+.footer
+{
+  @extend .footerFont, .divCSS;
+  flex: 0 1 auto;
+  margin-top: 5%;
+  margin-bottom: 3%;
+  padding: 3%;
+  p
+  {
+    margin: 0px;
+    a
+    {
+      text-decoration: underline;
+      transition-duration: 0.4s;
+      &:hover
+      {
+        color: gold;
+      }
+      &:visited
+      {
+        color: $fontColor;
+      }
+    }
+  }
+}
+
+/* Used for titles. */
+.titleFont
+{
+  font-family: 'Maven Pro', 'Source Sans Pro';
+  font-weight: 400;
+  color: $fontColor;
+}
+
+/* Used for content. */
+.contentFont
+{
+  font-family: 'Open Sans', 'Source Sans Pro';
+  font-weight: 300;
+  color: $fontColor;
+}
+
+/* Used for footer. */
+.footerFont
+{
+  font-family: 'Maven Pro', 'Source Sans Pro';
+  font-weight: 400;
+  font-size: 85%;
+  text-align: center;
+  color: $fontColor;
+}
+
+/* Couldn't come up with a meaningful name. */
+.divCSS
+{
+  background: $contentBodyColor;
+  border-radius: $borderRadius;
+}
+
+/* Styling used in button througout the website.*/
+.buttonCSS
+{
+  background: $btnColor;
+  border: 2px solid $btnColor;
+  border-radius: $borderRadius;
+  transition-duration: 0.4s;
+  &:hover
+  {
+    border-color: $borderHover;
+    cursor: pointer;
+  }
+}
+@media only screen and (min-width: 600px)
+{
+  body
+  {
+    padding: 5% 7%;
+  }
+  .footer
+  {
+    margin-top: 1.5%;
+  }
+}
+
+@media only screen and (min-width: 768px)
+{
+  body
+  {
+    padding: 10% 10% 0px;
+  }
+  .footer
+  {
+    padding: 1.5%;
+  }
+}
+
+@media only screen and (min-width: 768px) and (orientation: portrait)
+{
+  .footer
+  {
+    font-size: 100%;
+  }
+}
+
+@media only screen and (min-width: 992px)
+{
+  body
+  {
+    padding: 17% 10% 0px;
+  }
+  .footer
+  {
+    margin: 2% auto 0px;
+    padding: 10px;
+    width: 40%;
+  }
+}
+
+@media only screen and (min-width: 1024px)
+{
+  .footer
+  {
+    width: 45%;
+  }
+}
+
+@media only screen and (min-width: 1024px) and (orientation: portrait)
+{
+  .footer
+  {
+    width: 100%;
+    font-size: 125%;
+  }
+}
+
+@media only screen and (min-width: 1200px)
+{
+  .footer
+  {
+    width: 35%;
+  }
+}
+
+@media only screen and (min-width: 1440px)
+{
+  body
+  {
+    padding: 10% 10% 0px;
+  }
+  .footer
+  {
+    font-size: 90%;
+    margin-top: 1.5%;
+    width: 40%;
+    padding: 10px;
+  }
+}
+
+@media only screen and (min-width: 2560px)
+{
+  .footer
+  {
+    font-size: 150%;
+  }
+}

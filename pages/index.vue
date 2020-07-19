@@ -11,11 +11,13 @@
       <div v-for="utility in utilities" :key="utility.name" class="utils">
         <nuxt-link :to="utility.id">
           <button>
+            <img :src="utility.icon">
             {{ utility.name }}
           </button>
         </nuxt-link>
       </div>
     </section>
+    <!-- My amazing footer -->
     <footer class="footer">
       <p>Created by Artipheus - <a href="https://github.com/Artipheus/UUWA">Source</a></p>
     </footer>
