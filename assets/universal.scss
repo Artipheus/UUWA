@@ -48,13 +48,10 @@ body
     {
       text-decoration: underline;
       transition-duration: 0.4s;
+      color: $fontColor;
       &:hover
       {
         color: gold;
-      }
-      &:visited
-      {
-        color: $fontColor;
       }
     }
   }
