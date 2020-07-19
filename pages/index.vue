@@ -11,6 +11,7 @@
       <div v-for="utility in utilities" :key="utility.name" class="utils">
         <nuxt-link :to="utility.id">
           <button>
+            <img :src="utility.icon">
             {{ utility.name }}
           </button>
         </nuxt-link>
