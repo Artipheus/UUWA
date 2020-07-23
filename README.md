@@ -71,7 +71,9 @@ Alexiuz AS  - https://www.iconfinder.com/WHCompare
 
 ultimatearm - https://www.flaticon.com/authors/ultimatearm
 
-Freepik     - http://www.freepik.com/
+Freepik     - https://www.freepik.com/
+
+Font Awesome - https://fontawesome.com
 
 ## License
 GNU General Public License v3.0
