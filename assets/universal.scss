@@ -29,8 +29,17 @@ html, body {
 
 body
 {
-  padding: 5%;
   margin: 0px;
+}
+
+/* Transition between pages. */
+.woosh-enter-active, .woosh-leave-active
+{
+  transition: all 0.35s;
+}
+.woosh-enter, .woosh-leave-to
+{
+  opacity: 0;
 }
 
 /* CSS for footer. */
@@ -108,10 +117,6 @@ body
 }
 @media only screen and (min-width: 600px)
 {
-  body
-  {
-    padding: 5% 7%;
-  }
   .footer
   {
     margin-top: 1.5%;
@@ -120,10 +125,6 @@ body
 
 @media only screen and (min-width: 768px)
 {
-  body
-  {
-    padding: 10% 10% 0px;
-  }
   .footer
   {
     padding: 1.5%;
@@ -140,10 +141,6 @@ body
 
 @media only screen and (min-width: 992px)
 {
-  body
-  {
-    padding: 17% 10% 0px;
-  }
   .footer
   {
     margin: 2% auto 0px;
@@ -179,10 +176,6 @@ body
 
 @media only screen and (min-width: 1440px)
 {
-  body
-  {
-    padding: 10% 10% 0px;
-  }
   .footer
   {
     font-size: 90%;
