@@ -2,6 +2,7 @@
   <div :class="$style.mainBody">
     <nav-header />
     <div :class="$style.contentBody">
+      <p>hi</p>
     </div>
   </div>
 </template>
@@ -22,6 +23,6 @@ export default {
   .contentBody
   {
     flex: 1 0 100%;
-    background: $contentBodyColor;
+    background: transparent;
   }
 </style>

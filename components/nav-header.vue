@@ -1,6 +1,6 @@
 <template>
   <nav :class="$style.navibar">
-    <!-- Div that contains home link, tablet and desktop nav buttons and expand button. -->
+    <!-- Div that contains home link, utility buttons and expand button. -->
     <div :class="$style.div1">
       <!-- Home link div. -->
       <div :class="[$style.homeDiv, $style.flexWithCenter]">
@@ -8,24 +8,30 @@
           <i class="fa fa-fw fa-home" /> Home
         </nuxt-link>
       </div>
-      <!-- 'Dropdown' menu div. Only shown for tablets and desktops. -->
-      <div :class="[$style.tabDeskLinks]">
-        <!-- Div element for each link in drop-down. -->
-        <div v-for="utility in utilities" :key="utility.name" :class="$style.linkDiv">
-          <nuxt-link :to="utility.id">
-            <img :src="utility.icon">
-            {{ utility.name }}
-          </nuxt-link>
-        </div>
-      </div>
-      <!-- Expand button div. -->
-      <div :class="[$style.expandDiv, $style.flexWithCenter]" @click="exColFunc()">
-        <div>
+      <div :class="$style.dropdown">
+        <!-- Expand button. -->
+        <button :class="[$style.expandBtn]" @click="exColFunc()">
           <i class="far fa-caret-square-down" />
+          <p>Utilities</p>
+        </button>
+        <!-- Expand button for desktop and tablet. -->
+        <button :class="[$style.expandBtn, $style.td]" @click="exColFuncTD()">
+          <i class="far fa-caret-square-down" />
+          <p>Utilities</p>
+        </button>
+        <!-- utility menu div for tablet and desktop -->
+        <div :class="$style.tdLinks">
+          <!-- Div element for each link in drop-down. -->
+          <div v-for="utility in utilities" :key="utility.name" :class="$style.linkDiv">
+            <nuxt-link :to="utility.id">
+              <img :src="utility.icon">
+              {{ utility.name }}
+            </nuxt-link>
+          </div>
         </div>
       </div>
     </div>
-    <!-- 'Dropdown' menu div -->
+    <!-- utility menu div -->
     <div :class="$style.links">
       <!-- Div element for each link in drop-down. -->
       <div v-for="utility in utilities" :key="utility.name" :class="$style.linkDiv">
@@ -40,6 +46,7 @@
 </template>
 
 <script>
+// import vars from '@/assets/universal.scss'
 export default {
   computed:
   {
@@ -49,12 +56,25 @@ export default {
   },
   methods: {
     exColFunc () {
-      // eslint-disable-next-line prefer-const
-      let element = document.getElementsByClassName(this.$style.links)[0]
+      const element = document.getElementsByClassName(this.$style.links)[0]
+      // const btn = document.getElementsByClassName(this.$style.expandBtn)[0]
       if (element.style.display === 'none') {
         element.style.display = 'block'
+        // btn.style.background = vars.btnc
       } else {
         element.style.display = 'none'
+        // btn.style.background = 'none'
+      }
+    },
+    exColFuncTD () {
+      const element = document.getElementsByClassName(this.$style.tdLinks)[0]
+      // const btn = document.getElementsByClassName(this.$style.expandBtn)[0]
+      if (element.style.display === 'none') {
+        element.style.display = 'block'
+        // btn.style.background = vars.btnc
+      } else {
+        element.style.display = 'none'
+        // btn.style.background = 'none'
       }
     }
   }
@@ -64,6 +84,12 @@ export default {
 
 <style module lang="scss">
   @import '@/assets/universal.scss';
+  p
+  {
+    @extend .contentFont;
+    margin: 0px;
+    display: inline;
+  }
   /* Navigation bar. */
   .navibar
   {
@@ -96,6 +122,11 @@ export default {
     justify-content: space-between;
     width: 100%;
   }
+  .dropdown
+  {
+    display: flex;
+    flex-flow: column wrap;
+  }
   /* Div element for each link in drop-down. */
   .linkDiv
   {
@@ -117,25 +148,30 @@ export default {
   {
     display: none;
   }
-  /* Class for links in tablet and desktop screens. */
-  .tabDeskLinks
+  .tdLinks
   {
     display: none;
-    .scrollmenu
-    {
-      overflow: auto;
-      white-space: nowrap;
-    }
+  }
+  .td
+  {
+    display: none;
   }
   /* Styling for Div that expands the dropdown menu. */
-  .expandDiv
+  .expandBtn
   {
     @extend .contentFont;
-    float: right;
+    font-size: 16px;
     padding: 15px;
-    &:active
+    border: none;
+    background: transparent;
+    &:hover
     {
       background: $btnColor;
+      cursor: pointer;
+    }
+    *
+    {
+      display: inline;
     }
   }
   .homeDiv
@@ -158,24 +194,32 @@ export default {
     .div1
     {
       justify-content: flex-start;
+      padding: 1px;
     }
-    .expandDiv
+    .dropdown
+    {
+      display: inline-block;
+    }
+    .expandBtn
     {
       display: none;
     }
-    .tabDeskLinks
+    .td
     {
       display: inline-block;
-      overflow-x: auto;
-      white-space: nowrap;
+    }
+    .tdLinks
+    {
+      background: $contentBodyColor;
+      position: absolute;
     }
     .linkDiv
     {
-      display: inline-block;
+      display: block;
     }
     .homeDiv
     {
-      flex: 1 0 auto;
+      flex: 0 0 auto;
     }
   }
   @media only screen and (min-width: 1024px)

@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Maven+Pro&family=Open+Sans");
 
-$contentBodyColor: rgba(200, 200, 200, 0.15);
+$contentBodyColor: rgb(51, 51, 51); /* rgba(200 200, 200, 0.15) */
 $btnColor: rgb(34, 34, 34);
 $hoverBtn: #5c677d;
 $borderHover: rgba(200, 200, 200, 0.1);
@@ -9,6 +9,12 @@ $fonts: 'Maven Pro', 'Open Sans', 'Source Sans Pro', -apple-system, BlinkMacSyst
 $borderRadius: 8px;
 $borderWidth: 2.5px;
 $fontColor: rgba(200, 200, 200, 0.85);
+
+:export
+{
+  cbc: $contentBodyColor;
+  btnc: $btnColor;
+}
 
 /* Everyone likes border-box. */
 *
